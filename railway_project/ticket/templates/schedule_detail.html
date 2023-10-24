@@ -1,0 +1,5 @@
+<h1>Schedule Detail</h1>
+<p>Train: {{ schedule.train.name }}</p>
+<p>Departure Time: {{ schedule.departure_time }}</p>
+<p>Arrival Time: {{ schedule.arrival_time }}</p>
+<a href="{% url 'book_ticket' schedule.train.id schedule.id %}">Book Ticket</a>

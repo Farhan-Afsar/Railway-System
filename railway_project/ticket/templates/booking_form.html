@@ -1,0 +1,8 @@
+<h1>Book Ticket</h1>
+<form method="post">
+    {% csrf_token %}
+    <p>Passenger Name: {{ request.user.passenger.name }}</p>
+    <p>Train: {{ schedule.train.name }}</p>
+    <p>Schedule: {{ schedule.departure_time }} - {{ schedule.arrival_time }}</p>
+    <button type="submit">Book Ticket</button>
+</form>

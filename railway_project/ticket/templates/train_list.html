@@ -1,0 +1,8 @@
+<h1>Train List</h1>
+<ul>
+    {% for train in trains %}
+        <li>
+            <a href="{% url 'schedule_detail' train.schedule.id %}">{{ train.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
